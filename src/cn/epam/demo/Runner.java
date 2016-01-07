@@ -70,7 +70,7 @@ public class Runner {
 				break;
 				
 			case 5:
-				String str[][] = {{"bb","a","ccc","dddd"},{"ccc","bb","a","dddd"},{"dddd","a","ccc","bb"}};
+				String str[][] = {{"bb","a","ccc","dddd"},{"Monday","Tuesday","Wednesday","Friday"},{"One","two","three","five"}};
 				System.out.println("Print orginal matrix: ");
 				Matrix mat = new Matrix();
 				mat.printmatirx(str);
