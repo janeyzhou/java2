@@ -1,9 +1,10 @@
 package cn.epam.demo;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Runner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		boolean isRepeat = true;
 		
 		while (isRepeat) {
@@ -14,6 +15,7 @@ public class Runner {
 			System.out.println("3 - Multiplicaiton");
 			System.out.println("4 - Division");
 			System.out.println("5 - Sortarray");
+			System.out.println("6 - Read data from file");
 			System.out.println("0 - Exit");
 			
 			Scanner scanner = new Scanner(System.in);
@@ -70,6 +72,9 @@ public class Runner {
 				break;
 				
 			case 5:
+				
+					
+				
 				String str[][] = {{"bb","a","ccc","dddd"},{"Monday","Tuesday","Wednesday","Friday"},{"One","two","three","five"}};
 				System.out.println("Print orginal matrix: ");
 				Matrix mat = new Matrix();
@@ -77,6 +82,26 @@ public class Runner {
 				System.out.println("Please sorted matrix: ");
 				mat.sortarray(str);
 				mat.printmatirx(str);
+				break; 
+								
+					
+			case 6:
+				System.out.println("Read data from file: ");
+				Readfile rf = new Readfile();
+				rf.readLinefromFile("Array.txt");
+				
+				System.out.println("Print orginal data from Matrix which get data from file: ");
+				Matrix matr = new Matrix();
+				matr.printmatirx(rf.str);
+				
+				System.out.println("Please sorted matrix: ");
+				matr.sortarray(rf.str);
+				matr.printmatirx(rf.str);
+				
+				System.out.println("Write the sorted data to file:");	
+				rf.writeCharactertoFile("Newarray.txt",rf.str);
+				
+			
 				break; 
 							
 	
