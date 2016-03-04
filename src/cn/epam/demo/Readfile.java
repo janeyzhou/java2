@@ -15,7 +15,7 @@ public class Readfile {
 		
         try {
                 File file=new File(filePath);
-                if(file.isFile() && file.exists()){ //判断文件是否存在
+                if(file.isFile() && file.exists()){ //check if the file exist
                 	FileReader inputstream = new FileReader(file);                	
                 	int c;
                 	while ((c = inputstream.read()) != -1) {
@@ -27,9 +27,9 @@ public class Readfile {
                 		}
                 }
                 else
-                	System.out.println("找不到指定的文件");	                  
+                	System.out.println("Can't find the file");	                  
         } catch (Exception e) {
-            System.out.println("读取文件内容出错");
+            System.out.println("Get error while try to read file");
             e.printStackTrace();
         }
         
@@ -38,7 +38,7 @@ public class Readfile {
 	public void writeCharactertoFile (String filePath,String string[][]){
         try {
                 File file=new File(filePath);
-                if(file.isFile() && file.exists()){ //判断文件是否存在
+                if(file.isFile() && file.exists()){ //check if the file exist
                 	FileWriter outputstream = new FileWriter(file);  
                 	
         			System.out.println("Write character to a new file:");
@@ -61,9 +61,9 @@ public class Readfile {
           		
                 }                              
                 else
-                	System.out.println("找不到指定的文件");	                  
+                	System.out.println("Can't find the file");	                  
         } catch (Exception e) {
-            System.out.println("写入文件内容出错");
+            System.out.println("Get error while try to write file");
             e.printStackTrace();
         }
 	}
@@ -71,7 +71,7 @@ public class Readfile {
 	public void readLinefromFile(String filePath){
         try {
                 File file=new File(filePath);
-                if(file.isFile() && file.exists()){ //判断文件是否存在
+                if(file.isFile() && file.exists()){ //check if the file exist
                 	BufferedReader inputstream = new BufferedReader(new FileReader(file));                	
                 	String l;               	
                 	     
@@ -95,9 +95,9 @@ public class Readfile {
                 		}
                 }
                 else
-                	System.out.println("找不到指定的文件");	                  
+                	System.out.println("Can't find the file");	                  
         } catch (Exception e) {
-            System.out.println("读取文件内容出错");
+            System.out.println("Get error while try to read file");
             e.printStackTrace();
         }
 	}
